@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Variables */
+:root {
+    --azul: #001524;
+    --cian: #15616d;
+    --crema: #ffecd1;
+    --naranja: #ff7d00;
+    --cafe: #78290f;
+    --blanco: #FFFFFF;
+    --gris: #E5E5E5;
+    --font-family: 'Nunito', sans-serif;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-weight-bold: 600;
+    --font-weight-light: 300;
+}
+
+/* Estilos generales */
+* {
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--crema);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+/* Utilidades */
+.text-white {
+    color: var(--blanco);
+}
+
+.text-orange {
+    color: var(--naranja);
+}
+
+.text-blue {
+    color: var(--azul);
+}
+
+.text-gray {
+    color: var(--gris);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.font-light {
+    font-weight: var(--font-weight-light);
+}
+
+.font-lg {
+    font-size: var(--font-size-lg);
+}
+
+/* Navegación */
+.nav {
+    background-color: var(--azul);
+    color: var(--blanco);
+    /* padding: 1rem; */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    margin: 0 auto;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+/* Botones */
+.btn {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.btn-primary:hover {
+    color: var(--naranja);
+}
+
+.btn-primary:focus {
+    outline-style: solid;
+    box-shadow: 0px 4px 4px rgba(0, 68, 255, 0.25);
+    outline-width: 2px;
+}
+
+.btn-secondary {
+    background-color: var(--gris);
+    color: var(--azul);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(214, 209, 209);
+    color: var(--naranja);
+}
+
+/* Inicio */
+#botonesInicio {
+    height: auto;
+    width: auto;
+    margin-top: 4%;
+    display: grid;
+}
+
+.btn-start {
+    width: 315px;
+    height: 106px;
+    font-size: 18px;
+}
+
+.btn-add {
+    width: 100%;
+    max-width: 280px;
+    height: 67px;
+}
+
+/* Agregar palabra */
+#agregarPalabra {
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
+.input {
+    resize: none;
+    height: 60px;
+    width: 360px;
+    margin: 5% 25% 230px;
+    border: none;
+    background-color: var(--gris);
+    color: var(--azul);
+    font-family: var(--font-family);
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.input::placeholder {
+    color: var(--azul);
+    font-family: var(--font-family);
+    font-size: 20px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.advertencia {
+    margin: 0 auto;
+    vertical-align: text-bottom;
+}
+
+.botonesGC {
+    display: inline;
+    margin: 0 auto;
+}
+
+.botonesGC .btn {
+    margin: 15px;
+}
+
+.btn-guardar {
+    width: 317px;
+    height: 67px;
+    font-size: 18px;
+}
+
+.btn-cancelar {
+    width: 280px;
+    height: 67px;
+    margin-bottom: 10px;
+}
+
+/* Juego */
+#juego {
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 100%;
+    display: grid;
+}
+
+.progreso {
+    width: 294px;
+    height: 360px;
+    margin: auto;
+}
+
+.registradas {
+    margin: auto;
+}
+
+.ingresadas {
+    resize: none;
+    border: none;
+    font-family: var(--font-family);
+    vertical-align: text-bottom;
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--gris);
+    letter-spacing: 5px;
+}
+
+.tablero {
+    margin: auto;
+    margin-top: 3%;
+}
+
+.letra {
+    text-align: center;
+    resize: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: var(--azul);
+    margin-right: 5px;
+    font-size: 30px;
+    color: var(--azul);
+    background-color: var(--gris);
+}
+
+.botonesJuego {
+    display: inline-block;
+    padding: 2px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.btn-nuevo {
+    display: inline-block;
+    width: 260px;
+    height: 60px;
+}
+
+.btn-desistir {
+    display: inline-block;
+    width: 260px;
+    height: 60px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: var(--azul);
+    color: var(--blanco);
+    height: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    margin-right: 10px;
+}
+
+.footer-icon {
+    margin-right: 10px;
+}
+
+.github-link {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+
+.github-link:hover{
+    color: var(--naranja);
+}

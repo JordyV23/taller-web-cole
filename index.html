@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Taller-Web</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+
 <body>
-    
+    <header class="nav">
+        <div class="nav-container">
+            <i class="fa-solid fa-code"></i>
+            <h1 class="font-lg font-bold text-orange">Taller Web Dev</h1>
+            <h1 class="font-lg font-light text-white">2024</h1>
+        </div>
+    </header>
+
+    <div class="main">
+        <div id="botonesInicio">
+            <button class="btn btn-primary btn-start" onclick="jugar()">Iniciar Juego</button>
+            <button class="btn btn-secondary btn-add" onclick="ventanaAgregar()">Agregar nueva palabra</button>
+        </div>
+
+        <div id="agregarPalabra">
+            <textarea class="input" id="input" rows="1" cols="8" placeholder="Ingrese una palabra"></textarea>
+            <p class="advertencia"> <img src="img/circle.png" alt=""> Max. de 8 letras</p>
+            <div class="botonesGC">
+                <button class="btn btn-primary btn-guardar" onclick="agregarPalara()">Guardar</button>
+                <button class="btn btn-secondary btn-cancelar" onclick="cancelar()">Regresar</button>
+            </div>
+        </div>
+
+        <div id="juego">
+            <div class="progreso">
+                <img src="img/intentos/intento0.png" id="jugador">
+            </div>
+            <div class="tablero">
+            </div>
+            <div class="registradas">
+                <textarea class="ingresadas" id="ingresadas" rows="2" placeholder="" disabled></textarea>
+            </div>
+            <div class="botonesJuego">
+                <button class="btn btn-primary btn-nuevo" onclick="nuevoJuego()">Nuevo Juego</button>
+                <button class="btn btn-secondary btn-desistir" onclick="desistir()">Desistir</button>
+            </div>
+        </div>
+
+        <div class="toast" id="toast">
+            <div class="toast-body">
+            </div>
+        </div>
+
+
+    </div>
 </body>
+
+<footer>
+    <div class="footer-container">
+        <span class="footer-text">
+            All Made With Passion
+            <i class="fa-solid fa-fire"></i>
+        </span>
+        <a href="https://github.com/JordyV23/taller-web-cole" class="github-link">
+            <span class="footer-text">
+                Repositorio
+                <i class="fab fa-github"></i>
+            </span>
+        </a>
+    </div>
+</footer>
+<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>
